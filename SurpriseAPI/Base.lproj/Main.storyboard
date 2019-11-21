@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movie-->
+        <!--Movies-->
         <scene sceneID="KbS-On-sBE">
             <objects>
-                <tableViewController id="ROb-Jy-cKJ" sceneMemberID="viewController">
+                <tableViewController id="ROb-Jy-cKJ" customClass="MovieTableViewController" customModule="SurpriseAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N1b-6F-SOT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,7 +18,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7E-8c-FsG">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter movie title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w7E-8c-FsG">
                                     <rect key="frame" x="4" y="4" width="406" height="32"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -33,7 +33,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="aq1-dB-vE1" detailTextLabel="uue-56-qlL" style="IBUITableViewCellStyleSubtitle" id="KgB-Xx-C7v">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" textLabel="aq1-dB-vE1" detailTextLabel="uue-56-qlL" style="IBUITableViewCellStyleSubtitle" id="KgB-Xx-C7v">
                                 <rect key="frame" x="0.0" y="68" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KgB-Xx-C7v" id="d3G-h4-V9p">
@@ -63,7 +63,16 @@
                             <outlet property="delegate" destination="ROb-Jy-cKJ" id="P55-Ta-nAR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Movie" id="zOI-Mw-UeD"/>
+                    <navigationItem key="navigationItem" title="Movies" id="zOI-Mw-UeD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="4bN-2j-czv">
+                            <connections>
+                                <action selector="movieSearchButtonTapped:" destination="ROb-Jy-cKJ" id="3GZ-pO-9Gu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="movieTextField" destination="w7E-8c-FsG" id="IMe-q3-RUb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTh-xw-T8S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

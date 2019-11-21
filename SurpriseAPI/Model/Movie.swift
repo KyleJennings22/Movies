@@ -8,15 +8,13 @@
 
 import Foundation
 
-struct TopLevelObject: Codable {
-    let rating: RatingLevel
+struct Movie: Codable {
+    let title: String
+    let imdbRating: String
     
-    struct RatingLevel: Codable {
-        let value: String
+    enum CodingKeys: String, CodingKey {
+        case title = "Title"
+        case imdbRating
     }
 }
 
-enum CodingKeys: String, CodingKey {
-    case rating = "Rating"
-    case value = "Value"
-}

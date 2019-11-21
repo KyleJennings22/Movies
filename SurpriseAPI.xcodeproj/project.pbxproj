@@ -14,6 +14,7 @@
 		2798DA26238735E600643833 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2798DA24238735E600643833 /* LaunchScreen.storyboard */; };
 		2798DA2F23873BA500643833 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798DA2E23873BA500643833 /* Movie.swift */; };
 		2798DA3123873D1400643833 /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798DA3023873D1400643833 /* MovieController.swift */; };
+		2798DA352387416D00643833 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798DA342387416D00643833 /* MovieTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2798DA27238735E600643833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2798DA2E23873BA500643833 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		2798DA3023873D1400643833 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
+		2798DA342387416D00643833 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				2798DA1F238735E400643833 /* Main.storyboard */,
 				2798DA3223873D1800643833 /* Model */,
 				2798DA3323873D1C00643833 /* Model Controller */,
+				2798DA362387438800643833 /* View Controllers */,
 			);
 			path = SurpriseAPI;
 			sourceTree = "<group>";
@@ -92,6 +95,14 @@
 				2798DA3023873D1400643833 /* MovieController.swift */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		2798DA362387438800643833 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2798DA342387416D00643833 /* MovieTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2798DA352387416D00643833 /* MovieTableViewController.swift in Sources */,
 				2798DA3123873D1400643833 /* MovieController.swift in Sources */,
 				2798DA1A238735E400643833 /* AppDelegate.swift in Sources */,
 				2798DA1C238735E400643833 /* SceneDelegate.swift in Sources */,
